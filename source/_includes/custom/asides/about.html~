@@ -1,4 +1,8 @@
 <section>
-  <h1>About Me</h1>
-  <p>A little something about me.</p>
+  <h1><image src="http://distorsi.github.io/images/user.gif" width="28" height="28"> 
+  Tentang Saya
+  </h1>
+  <p>saya biasa di panggil <strong>as'ary</strong>, 
+  lulusan D3 Manajemen Informatika, Politeknik Negeri Banjarmasin, yang saat ini melanjutkan S1 di STMIK Banjarmasin Kelas Tanah Bumbu.
+  </p>
 </section>
