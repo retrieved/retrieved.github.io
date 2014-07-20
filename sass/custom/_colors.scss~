@@ -41,8 +41,8 @@
 //$pre-bg: $base03;
 //$pre-border: darken($base02, 5);
 //$pre-color: $base1;
-$page-bg :#284e8f;
+$page-bg :#f7f7f7;
 $main-bg :#fff;
 $nav-color :#fff;
-$nav-color-hover: #030a12;
-$visited: #030a12;
+$nav-color-hover: #fff;
+$visited: #fff;

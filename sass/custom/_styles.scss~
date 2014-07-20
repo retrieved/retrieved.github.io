@@ -3,14 +3,14 @@
 
 $border-ep: #E0E0E0;
 html {
-     background: image-url('background.png') repeat-x scroll center top #f7f7f7;
+     background: image-url('background.png') repeat-x scroll center top $page-bg;
   }
 
   #main
   {
   border-left: 1px solid $border-ep;
   border-right: 1px solid $border-ep;
-  border-bottom: 1px solid #284e8f;
+  border-bottom: 1px solid $border-ep;
   }
 
 
@@ -59,11 +59,11 @@ html {
 
   .blue_dark {
       color: #5AA6F1;
-      text-shadow: 2px 2px 2px  #030a12;
+      text-shadow: 2px 2px 2px  #0F3B6A;
       font-size:20px;
   }
   .blue_light {
-      text-shadow: 2px 2px 2px  #030a12;
+      text-shadow: 2px 2px 2px  #0F3B6A;
       color: #A6CCFB;
       font-size:20px;
   }
