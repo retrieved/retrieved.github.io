@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Arvo';
+  src: url('/assets/fontface/Arvo-Regular-webfont.eot');
+  src: url('/assets/fontface/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/Arvo-Regular-webfont.woff') format('woff'),
+       url('/assets/fontface/Arvo-Regular-webfont.ttf') format('truetype'),
+       url('/assets/fontface/Arvo-Regular-webfont.svg#ArvoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arvo';
+  src: url('/assets/fontface/Arvo-Italic-webfont.eot');
+  src: url('/assets/fontface/Arvo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/Arvo-Italic-webfont.woff') format('woff'),
+       url('/assets/fontface/Arvo-Italic-webfont.ttf') format('truetype'),
+       url('/assets/fontface/Arvo-Italic-webfont.svg#ArvoItalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Arvo';
+  src: url('/assets/fontface/Arvo-Bold-webfont.eot');
+  src: url('/assets/fontface/Arvo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/Arvo-Bold-webfont.woff') format('woff'),
+       url('/assets/fontface/Arvo-Bold-webfont.ttf') format('truetype'),
+       url('/assets/fontface/Arvo-Bold-webfont.svg#ArvoBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arvo';
+  src: url('/assets/fontface/Arvo-BoldItalic-webfont.eot');
+  src: url('/assets/fontface/Arvo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/Arvo-BoldItalic-webfont.woff') format('woff'),
+       url('/assets/fontface/Arvo-BoldItalic-webfont.ttf') format('truetype'),
+       url('/assets/fontface/Arvo-BoldItalic-webfont.svg#ArvoBoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fontface/Lato-Regular-webfont.eot');
+  src: url('/assets/fontface/Lato-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/Lato-Regular-webfont.woff') format('woff'),
+       url('/assets/fontface/Lato-Regular-webfont.ttf') format('truetype'),
+       url('/assets/fontface/Lato-Regular-webfont.svg#LatoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fontface/Lato-Italic-webfont.eot');
+  src: url('/assets/fontface/Lato-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/Lato-Italic-webfont.woff') format('woff'),
+       url('/assets/fontface/Lato-Italic-webfont.ttf') format('truetype'),
+       url('/assets/fontface/Lato-Italic-webfont.svg#LatoItalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+  
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fontface/Lato-Black-webfont.eot');
+  src: url('/assets/fontface/Lato-Black-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/Lato-Black-webfont.woff') format('woff'),
+       url('/assets/fontface/Lato-Black-webfont.ttf') format('truetype'),
+       url('/assets/fontface/Lato-Black-webfont.svg#LatoBlack') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fontface/Lato-BlackItalic-webfont.eot');
+  src: url('/assets/fontface/Lato-BlackItalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/Lato-BlackItalic-webfont.woff') format('woff'),
+       url('/assets/fontface/Lato-BlackItalic-webfont.ttf') format('truetype'),
+       url('/assets/fontface/Lato-BlackItalic-webfont.svg#LatoBlackItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url('/assets/fontface/PTF55F-webfont.eot');
+  src: url('/assets/fontface/PTF55F-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/PTF55F-webfont.woff') format('woff'),
+       url('/assets/fontface/PTF55F-webfont.ttf') format('truetype'),
+       url('/assets/fontface/PTF55F-webfont.svg#PTSerifRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url('/assets/fontface/PTF56F-webfont.eot');
+  src: url('/assets/fontface/PTF56F-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/PTF56F-webfont.woff') format('woff'),
+       url('/assets/fontface/PTF56F-webfont.ttf') format('truetype'),
+       url('/assets/fontface/PTF56F-webfont.svg#PTSerifItalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url('/assets/fontface/PTF75F-webfont.eot');
+  src: url('/assets/fontface/PTF75F-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/PTF75F-webfont.woff') format('woff'),
+       url('/assets/fontface/PTF75F-webfont.ttf') format('truetype'),
+       url('/assets/fontface/PTF75F-webfont.svg#PTSerifBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url('/assets/fontface/PTF76F-webfont.eot');
+  src: url('/assets/fontface/PTF76F-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fontface/PTF76F-webfont.woff') format('woff'),
+       url('/assets/fontface/PTF76F-webfont.ttf') format('truetype'),
+       url('/assets/fontface/PTF76F-webfont.svg#PTSerifBoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+#{headings()}{
+  @extend .heading;
+  text-rendering: optimizelegibility;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+
