@@ -9,8 +9,7 @@
   <meta name="author" content="as_ary">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Octopress adalah platform blogging yang &ldquo;wow&rdquo; direkomendasikan kepada siapapun yang tidak keberatan melakukan pekerjaan dengan sedikit &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -33,6 +32,72 @@
 
 <meta property="fb:app_id" content="779221698763134" />
 
+<style type="text/css">
+ol {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+ 
+    margin: 0;
+    margin-left: 1.5em;
+    padding: 0;
+ 
+    counter-reset: li-counter;
+}
+ol > li{
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 0.5em;
+    min-height: 3em;
+}
+ol > li:before {
+    position: absolute;
+    top: 0;
+    left: -1.33em;
+    width: 1.2em;
+    height: 1.2em;
+ 
+    font-size: 1em;
+    line-height: 1.2;
+    text-align: center;
+    color: #f5f5f5;
+ 
+    border: 2px solid #c5c5c5;
+    border-radius: 50%;
+    background-color: #464646;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+</style>
+<style type="text/css">
+ul {
+    list-style-type: "disc";
+    list-style-type: "disc" !ie; /*IE 7- hack*/
+ 
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+ 
+    counter-reset: li-counter;
+}
+ol > li{
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 0.5em;
+    min-height: 3em;
+}
+ol > li:before {
+    position: absolute;
+    top: 0;
+    left: -1.33em;
+    width: 1.2em;
+    height: 1.2em;
+ 
+    line-height: 1.2;
+ 
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+</style>
 
   
 
@@ -78,7 +143,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/07/21/hello-world/">Hello World</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/07/21/hello-world/">Octopress + Github Page Di Ubuntu</a></h1>
     
     
       <p class="meta">
@@ -101,9 +166,59 @@
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>Octopress adalah platform blogging yang &ldquo;wow&rdquo; direkomendasikan kepada siapapun yang tidak keberatan melakukan pekerjaan dengan sedikit codingan, tetapi dibalik semua itu anda akan belajar beberapa keterampilan baru yang kren misal nya, belajar apa itu version control system dengan <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control" target="_blank" style="text-decoration:none">GIT</a> dan pastinya memiliki blog yang keren.<blockquote>sudah banyak tutorial yang mendetail tentang cara membuat blog dengan octopress. situs resmi octopress memiliki dokumentasi yang mendetail, dan pada tutorial ini mecoba menuliskan kembali langkah &ndash; langkah setup octopress di ubuntu. ok langsung saja Let’s get started!!</blockquote>
+Berikut langkah-langkah dan persiapan set-up octopress:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>install git
+</span><span class='line'>buat repository di github
+</span><span class='line'>install ruby (pada tutorial ini installasi ruby menggunakan rvm)
+</span><span class='line'>clone octopress github repository (master branch)
+</span><span class='line'>install tema default octopress
+</span><span class='line'>configurasi octopress untuk halam github deploy
+</span><span class='line'>generate, commit dan push blog anda di repository github(master branch)
+</span><span class='line'>buat post pertama anda</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Install Git</h5>
+
+
+<p>buka terminal pada ubuntu anda dengan menekan CTRL + ALT + T, dan ketikkan perintah ini :</p>
+
+<figure class='code'><figcaption><span>Install Git </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:git-core/ppa
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install git-core</span></code></pre></td></tr></table></div></figure>
+
+
+<p>untuk melihat versi git ketikkan perintah berikut setelah intalasi selesai</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --version</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Membuat account github baru dan sebuah halam github repository</h5>
+
+
+<p>Default penamaan konvensi untuk halaman repositori Github adalah {username}.github.io&hellip; Anda dapat mengakses halaman situs Github anda (HTML statis hanya) melalui URL berikut <a href="http://">http://</a> {username} github.io.
+Halaman Github dasarnya memungkinkan Anda untuk meng-host situs HTML statis langsung di Github.</p>
+
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/07/21/hello-world/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -122,7 +237,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/07/21/hello-world/">Hello World</a>
+        <a href="/blog/2014/07/21/hello-world/">octopress + github page di ubuntu</a>
       </li>
     
   </ul>

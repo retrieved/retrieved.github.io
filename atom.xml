@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-07-21T05:55:05+08:00</updated>
+  <updated>2014-07-21T06:28:30+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -14,11 +14,312 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
+    <title type="html"><![CDATA[octopress + github page di ubuntu]]></title>
     <link href="http://retrieved.github.io/blog/2014/07/21/hello-world/"/>
     <updated>2014-07-21T04:38:39+08:00</updated>
     <id>http://retrieved.github.io/blog/2014/07/21/hello-world</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Octopress adalah platform blogging yang &ldquo;wow&rdquo; direkomendasikan kepada siapapun yang tidak keberatan melakukan pekerjaan dengan sedikit codingan, tetapi dibalik semua itu anda akan belajar beberapa keterampilan baru yang kren misal nya, belajar apa itu version control system dengan <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control" target="_blank" style="text-decoration:none">GIT</a> dan pastinya memiliki blog yang keren.<blockquote>sudah banyak tutorial yang mendetail tentang cara membuat blog dengan octopress. situs resmi octopress memiliki dokumentasi yang mendetail, dan pada tutorial ini mecoba menuliskan kembali langkah &ndash; langkah setup octopress di ubuntu. ok langsung saja Let’s get started!!</blockquote>
+Berikut langkah-langkah dan persiapan set-up octopress:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>install git
+</span><span class='line'>buat repository di github
+</span><span class='line'>install ruby (pada tutorial ini installasi ruby menggunakan rvm)
+</span><span class='line'>clone octopress github repository (master branch)
+</span><span class='line'>install tema default octopress
+</span><span class='line'>configurasi octopress untuk halam github deploy
+</span><span class='line'>generate, commit dan push blog anda di repository github(master branch)
+</span><span class='line'>buat post pertama anda</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Install Git</h5>
+
+
+<p>buka terminal pada ubuntu anda dengan menekan CTRL + ALT + T, dan ketikkan perintah ini :</p>
+
+<figure class='code'><figcaption><span>Install Git </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:git-core/ppa
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install git-core</span></code></pre></td></tr></table></div></figure>
+
+
+<p>untuk melihat versi git ketikkan perintah berikut setelah intalasi selesai</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --version</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Membuat account github baru dan sebuah halam github repository</h5>
+
+
+<p>Default penamaan konvensi untuk halaman repositori Github adalah {username}.github.io&hellip; Anda dapat mengakses halaman situs Github anda (HTML statis hanya) melalui URL berikut <a href="http://">http://</a> {username} github.io.
+Halaman Github dasarnya memungkinkan Anda untuk meng-host situs HTML statis langsung di Github.</p>
+
+<!-- more -->
+
+
+<h5>Install RVM</h5>
+
+
+<p>Sebelum kita melakukan installasi, kita harus menjalankan update untuk memastikan bahwa semua paket yang kita download ke VPS up to date:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Setelah itu selesai, kita bisa mulai menginstal RVM, Manager Ruby Version. Ini adalah program besar yang memungkinkan Anda menggunakan beberapa versi Ruby pada satu server; Namun, dalam kasus ini, kita hanya akan menggunakannya untuk menginstal versi terbaru dari Ruby.jika di ubuntu anda belum terinstall curl maka lakukan langkah berikut :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install curl</span></code></pre></td></tr></table></div></figure>
+
+
+<p>setelah itu kita akan mengintall RVM yang nanti digunakan untuk menginstall ruby</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\curl -L https://get.rvm.io | bash -s stable
+</span><span class='line'>source ~/.rvm/scripts/rvm</span></code></pre></td></tr></table></div></figure>
+
+
+<p>setelah installasi selesai, kita perlu menginstall beberapa depedancies secara atomatis dengan menuliskan kode berikut pada terminal anda:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm requirements</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>install ruby</h5>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm install ruby</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sekarang ruby dengan versi terakhir telah terinstall, Namun, karena kita diakses melalui sebuah program yang memiliki berbagai versi Ruby, kita perlu memberitahu sistem untuk menggunakan versi kita hanya diinstal secara default.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm use ruby --default</span></code></pre></td></tr></table></div></figure>
+
+
+<p>untuk memastikan installasi berhasil, ketikan perintah berikut untuk mengetahui versi ruby yang kita gunakan</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby --version</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Install RubyGems</h5>
+
+
+<p>Langkah berikutnya memastikan bahwa kita memiliki semua komponen yang diperlukan dari Ruby. Kita dapat terus menggunakan RVM untuk menginstal gems; ketik baris ini ke dalam terminal.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm rubygems current
+</span><span class='line'>gem --version</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Clone halaman github repository octopress (master branch)</h5>
+
+
+<p>pada langkah ini Anda akan  mengkloning master barach dari repositori github Octopress resmi. Saya pikir sangat penting untuk dicatat bahwa lokasi di mana Anda clone repositori ini akan berfungsi sebagai direktori  repositori untuk blog Anda. Karena itu, saya sarankan penamaan direktori yang sama seperti repositori Github Pages Anda, misalnya ubuntu.github.io.</p>
+
+<figure class='code'><figcaption><span>Clone halaman github repository octopress </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;MAIN_GIT_DIR> // e.g. `cd /home/ubuntu/githome`
+</span><span class='line'>git clone https://github.com/imathis/octopress.git {USERNAME}.github.io
+</span><span class='line'>//`e.g. clones repo to  /home/ubuntu/githome/ubuntu.github.io`</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote>
+catatan : pada bagian git ini mungkin ada sedikit keluhan jika Anda belum setup email global dan / atau nama pengguna. Jika itu terjadi, jalankan perintah yang diperlukan dan coba lagi.
+</blockquote>
+
+
+<h5>Install bundler</h5>
+
+
+<p>Sekarang Anda telah mengkloning repositori Octopress, Anda harus menginstal  ruby gems ​ tambahan yang dibutuhkan Octopress.</p>
+
+<p>Octopress source  memiliki sebuah file bernama <code>Gemfile</code>. File ini berisi daftar semua <code>ruby</code> <code>gems</code> ​​yang diperlukan, dan bundler akan melihat file ini dan secara otomatis mengambil <code>ruby</code> <code>gems</code> ​​yang diperlukan untuk Anda.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
+</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Install default theme</h5>
+
+
+<p>Pada bagian ini Anda siap untuk menginstal default tema Octopress. Untuk melakukan ini, Anda akan menggunakan perintah <code>rake</code>. The Octopress sumber berisi sebuah file bernama <code>Rakefile</code> yang mendefinisikan berbagai <code>rake</code> target (script) yang dapat dieksekusi melalui perintah <code>rake</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Konfigurasi Octopress pada halaman github deployment</h5>
+
+
+<p>Octopress memiliki script <code>rake</code> yang secara otomatis mengkonfigurasi repositori yang baru Anda kloning untuk deployment Github Pages. Script itu sendiri hanya memerlukan input minimal, tetapi penting untuk benar-benar memahami bagaimana menggunakannya.</p>
+
+<p>Script ini telah diperbarui sejak Octopress 2.0 untuk mendukung bekerja dengan Github melalui HTTPS bukan pendekatan SSH yang lebih tradisional. Saya pribadi lebih suka pendekatan ini, karena Anda tidak perlu khawatir tentang menghasilkan kunci SSH.</p>
+
+<p>Github sekarang merekomendasikan menggunakan HTTPS bukan SSH. <a href="https://github.com/blog/642-smart-http-support" target="_blank" style="text-decoration:none">klik disini</a> untuk lebih jelasnya.</p>
+
+<p>Agar Octopress benar-benar mendukung HTTPS, ketika <code>rake</code> meminta Anda untuk memasukkan URL repositori Github, pastikan Anda menggunakan HTTPS untuk URL repositori (misalnya <code>https://github.com/ubuntu/ubuntu.github.io.git</code>) . Untuk referensi, URL SSH adalah: <code>git@github.com: ubuntu / ubuntu.github.io.git</code>. Jika Anda tertarik untuk bekerja dengan URL SSH, <a href="https://help.github.com/articles/generating-ssh-keys" target="_blank" style="text-decoration:none">klik disini</a> untuk lebih jelasnya..</p>
+
+<p>beberapa hal penting dari perintah script itu:</p>
+
+<ol>
+<li>mengganti nama asal octopress (origin remote octopress), ini akan membiarkan anda meperbarui octopress melalui remote octopress.</li>
+<li>menambahkan ke halaman github repo anda sebagai default origin remote</li>
+<li>perubahan branch aktif dari master ke source. Ini berarti bahwa root directory repositori sekarang akan dikaitkan dengan source branch dalam halaman github repositori Anda.</li>
+<li>Ini akan mengkonfigurasi URL standar blog Anda berdasarkan pada URL repositori Github Pages (misalnya http://ubuntu.github.io)</li>
+<li>menciptakan sebuah direktori baru bernama _deploy pada direktori repositori root anda. Direktori ini akan berisi kode yang berhubungan dengan master branch repositori Anda.</li>
+</ol>
+
+
+<p>Satu hal penting yang perlu diperhatikan: direktori <code>_deploy</code>, yang sesuai dengan <code>master branch</code> dari halaman repositori Github, adalah di mana HTML dikompilasi dan ditempatkan. <code>master branch</code> berisi HTML yang akan disajikan kepada pengguna browser web ketika mengarahkan ke blog Anda.</p>
+
+<p><code>source</code> branch (yang juga kebetulan direktori repositori root anda misalnya /home/user/githome/ubuntu.github.io berisi <code>markdown</code> , <code>SASS</code>, <code>JavaScript</code> yang dikompilasi melalui Jekyll ke HTML.<br>
+Anda harus memastikan bahwa semuanya telah diatur dengan benar dengan menjalankan perintah berikut:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#di root repo directory anda
+</span><span class='line'>git remote -v
+</span><span class='line'># hasil output remotes anda, :
+</span><span class='line'>#octopress https://github.com/imathis/octopress.git (fetch)
+</span><span class='line'>#octopress https://github.com/imathis/octopress.git (push)
+</span><span class='line'>#origin https://github.com/ubuntu/ubuntu.github.io.git (fetch)
+</span><span class='line'>#origin https://github.com/ubuntu/ubuntu.github.io.git (push)
+</span><span class='line'>git branch -a #mengkonfirmasi bahwa dir root repo menunjuk ke `source` branch
+</span><span class='line'># source
+</span><span class='line'>cd deploy
+</span><span class='line'>git branch -a #mengkonfirmasi bahwa dir deploy menunjuk ke `master` branch
+</span><span class='line'># master
+</span><span class='line'>cd\ #kembali ke root direktori anda</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Generate, commit, dan push blog anda ke Github (master branch)</h5>
+
+
+<p>Pada poin ini Anda dapat meng<code>generate</code> HTML anda, mem<code>preview</code>, dan melakukan <code>commit</code> untuk Github anda. Ada berbagai script <code>rake</code> yang dapat digunakan untuk melakukan tugas-tugas ini:</p>
+
+<ul>
+<li><em>rake generate</em> : ini akan mengkompilasi segala sesuatu di <em>{root REPO direktori DIR> / source}</em> (<em>markdown, SASS,</em> dan <em>JavaScript</em>) dan menempatkan HTML yang dihasilkan ke dalam <em>{root REPO DIR> / folder publik}</em>.</li>
+<li><em>rake preview</em> : ini akan menjalankan server web lokal (pada port 4000), yang akan membantu Anda melihat blog Anda secara lokal. Ini akan mendeteksi perubahan pada <em>markdown</em>, sehingga Anda bisa me refresh blog setelah melakukan perubahan <em>markdown</em> dan melihat kembali hasil perubahan itu.</li>
+<li><em>rake deploy</em> :  Ini akan menyalin semua HTML yang dihasilkan dari <em>{root REPO DIR/public}</em> untuk <em>{root REPO DIR> / _deploy}</em> dan <em>commit</em> kemudian <em>push</em> kode di <em>{root REPO DIR / _deploy}</em> ke <em>master branch</em> repositori halaman Github  Anda.</li>
+</ul>
+
+
+<p>Jadi silakan <code>generate</code> dan <code>push</code> <code>master</code> branch blog Anda ke Github.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span><span class='line'># Catatan: Anda harus mengisikan username dan password Github anda</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Commit dan push source files anda ke github (source branch)</h5>
+
+
+<p>Tidak ada skrip <code>rake</code> untuk melakukan <code>source</code> branch Anda, sehingga Anda harus melakukannya dengan menggunakan <code>git</code>.</p>
+
+<p>Melakukan <code>source</code> branch sangat penting, karena berfungsi sebagai dasar untuk HTML yang akan dihasilkan.</p>
+
+<p>Pastikan Anda dalam direktori root untuk repositori Anda (lokal) ketika menjalankan perintah ini.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m "initial commit for source files"
+</span><span class='line'>git push origin source
+</span><span class='line'>#NOTE: itu sangat penting untuk melakukan push dan commit ke source branch anda</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Buat postingan di blog pertama anda</h5>
+
+
+<p>untuk memastikan bahwa blog Octopress Anda bekerja dengan benar, saya sarankan membuat posting blog awal. Anda selalu dapat menghapus postingan ini nanti.
+Untuk melakukan ini, Anda akan menjalankan <code>rake new_post ['Judul posting blog']</code> .</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post['Hello World']
+</span><span class='line'># membuat source/_posts/2011-08-01-hello-world.markdown</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ini akan membuat file baru <code>markdown</code> di direktori <code>&lt;root REPO DIR&gt; / source / _posts</code>. Nama file <code>markdown</code> akan didasarkan dari judul yang Anda berikan dalam naskah <code>rake</code>. Nama ini juga akan berfungsi sebagai dasar untuk permalink Anda dengan posting blog.</p>
+
+<p>Anda kemudian dapat pergi ke <code>&lt;root REPO DIR&gt; / source / _posts</code> dan mengedit file <code>markdown</code> yang baru dibuat. Saya merekomendasikan untuk menggunakan program seperti <code>MarkdownPad 2</code> untuk os window dan <code>gedit</code> pada ubuntu untuk melakukan pengeditan post anda.</p>
+
+<p>Setiap file <code>markdown</code> akan memiliki YAML &ldquo;header&rdquo; dengan beberapa Octopress info spesifik yang akan digunakan ketika kompilasi <code>markdown</code> ke HTML.
+untuk lebih detail nya silahkan kunjungi doc octopress <a href="http://octopress.org/docs/blogging/" target="_blank" style="text-decoration:none">di sini</a></p>
+
+<br>
+
+
+<p>Di bawah header, Anda akan menambahkan <code>markdown</code> untuk postingan blog Anda. Setelah mengedit dan menyimpan file <code>markdown</code>, Anda mungkin ingin melihat itu, dan kemudian jika Anda senang dengan hal itu, commit dan push ke <code>master</code> branch repositori halaman github anda.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake preview
+</span><span class='line'># buka di tab baru dengan mengunjungi link ini > http://localhost:4000
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dan ingat untuk selalu commit <code>source</code> branch halaman github repository anda.dan menyimpan file <code>markdown</code>,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#make sure your in the &lt;ROOT REPO DIR>
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m "added first blog post"
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Jika Anda ingin menghapus postingan blog Anda, anda dapat menghapus file <code>markdown</code>. Dari <code>&lt;root REPO DIR&gt; / source / _posts</code>. Setelah memastikan sudah melakukan <code>rake generate</code> dan <code>rake deploy</code>.</p>
+
+<br>
+
+
+<br>
+
+
+<p><strong>Daftar Pustaka</strong>&hellip; :D<br>
+<a href="http://robstrube.com/blog/2013/07/30/octopress-plus-github-pages-on-windows-tutorial/">http://robstrube.com/blog/2013/07/30/octopress-plus-github-pages-on-windows-tutorial/</a></p>
 ]]></content>
   </entry>
   
