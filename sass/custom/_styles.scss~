@@ -1,7 +1,5 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
-/* import typography */
-@import "typography.scss";
 
 $border-ep: #E0E0E0;
 html {
@@ -62,7 +60,7 @@ html {
   .blue_dark {
       color: #5AA6F1;
       text-shadow: 2px 2px 2px  #030a12;
-      font-size:25px;
+      font-size:15px;
   }
   .blue_light {
       text-shadow: 2px 2px 2px  #030a12;

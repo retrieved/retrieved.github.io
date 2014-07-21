@@ -19,7 +19,7 @@
 //$sidebar-pad-medium: 15px;
 //$sidebar-pad-wide: 20px;
 //$sidebar-width-wide: 300px;
-body > header h5 {
+body > header h1 {
       padding-left:2.5em;
       text-align:right;
       @media only screen and (min-width: 432px) {
@@ -33,7 +33,7 @@ body > header h5 {
       }
 }
 
-body > header h5 {
+body > header h2 {
       padding-left:5.62em;
       text-align:right;
       @media only screen and (min-width: 432px) {
@@ -48,7 +48,7 @@ body > header h5 {
       }
 }
 
-body > header h5:before {
+body > header h1:before {
       content:"";
       position:absolute;
       left:0em;
