@@ -25,10 +25,6 @@ footer: true
 <th align="right">as.ary29@gmail.com</th>
 </tr>
 <tr>
-<th align="left">web/blog</th>
-<th align="right">http://distorsi.github.io</th>
-</tr>
-<tr>
 <th align="left">Birth Date</th>
 <th align="right">29 March, 1991</th>
 </tr>
@@ -45,18 +41,18 @@ footer: true
 <th align="right">Singel</th>
 </tr>
 <tr>
-<th align="left">web/blog</th>
-<th align="right">http://distorsi.github.io</th>
+<th align="left">My blog</th>
+<th align="right">http://retrieved.github.io</th>
 </tr>
 </table>
 <br>
 <h5>PERSONAL PROFILE</h5>
  My future  plans are very definite, first I am going to improve Java programming language and then finish my study in STMIK university for two years. after that  to college if possible.but else i will work and get married  with my soul mate,and certainly girls, I want to live in Batulicin for a long time, I wanna live happy forever with my wife and my children someday.
-I think that's enough Personality, and success always for all
+I think that's enough Personality, and `success always for all`
 <h5>CAREER HISTORY</h5>
 <table>
 <tr>
-<td>Okt 2011</td>
+<td>Oktober 2011</td>
 <td></td>
 <td><strong>An Coustomer Service</strong><br>PT.BRI Cabang Batulicin /Unit Serongga</td>
 <td></td>
@@ -69,7 +65,7 @@ I think that's enough Personality, and success always for all
 </td>
 </tr>
 <tr>
-<td>Feb 2013</td>
+<td>February 2013</td>
 <td></td>
 <td><strong>An General Affair</strong><br>PT.Meratus Jaya Iron Dan Steel</td>
 <td></td>
