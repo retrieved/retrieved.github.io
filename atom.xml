@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-07-22T01:26:03+08:00</updated>
+  <updated>2014-07-22T01:51:39+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Memahami Istilah Program]]></title>
+    <link href="http://retrieved.github.io/blog/2014/07/22/memahami-istilah-program/"/>
+    <updated>2014-07-22T01:35:35+08:00</updated>
+    <id>http://retrieved.github.io/blog/2014/07/22/memahami-istilah-program</id>
+    <content type="html"><![CDATA[<p>Dalam dunia komputer, <code>Program</code> berarti &ldquo;kumpulan code / pertintah yang berupa baris baris code yang ditujukan kepada komputer untuk melakukan suatu tindakan sesuai yang dikehendaki si penulis program tersebut&rdquo;.
+Untuk membuat program yang ditulis oleh seseorang atau bisa disebut dengan <code>source code</code> agar ini bisa dijalankan oleh komputer, diperlukan suatu program lain yang berfungsi untuk menerjemahkan program tersebut kedalam bentuk yang dimengerti oleh komputer. pada bahasa pemograman <code>Java</code> program ini bisa ditulis dengan <code>vi</code> atau <code>notepad</code> atau menggunakan tools seperti <code>eclipse</code>, <code>netbeans</code>, <code>IntellijIDEA</code>, <code>Borland JBuilder</code>,  selanjutnya <code>source code</code> perlu diterjemahkan ke kode yang dinamakan <code>bytecode</code> kode hasil terjemah inilah yang akan dijalankan komputer melalui perantara suatu program khusus yang dikemas dalam <code>Java Runtime Environment</code> (JRE).</p>
+
+<blockquote>
+<li>Aktivitas dalam membuat program biasa dinamakan `pemograman` (programing)</li>
+<li>Orang yang membuat program disebut pemogram (`programmer`)
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Keunggulan Java]]></title>
