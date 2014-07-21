@@ -3,7 +3,7 @@ layout: post
 title: "octopress + github page di ubuntu"
 date: 2014-07-21 04:38:39 +0800
 comments: true
-categories: 
+categories: General
 ---
 Octopress adalah platform blogging yang "wow" direkomendasikan kepada siapapun yang tidak keberatan melakukan pekerjaan dengan sedikit codingan, tetapi dibalik semua itu anda akan belajar beberapa keterampilan baru yang kren misal nya, belajar apa itu version control system dengan <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control" target="_blank" style="text-decoration:none">GIT</a> dan pastinya memiliki blog yang keren.<blockquote>sudah banyak tutorial yang mendetail tentang cara membuat blog dengan octopress. situs resmi octopress memiliki dokumentasi yang mendetail, dan pada tutorial ini mecoba menuliskan kembali langkah - langkah setup octopress di ubuntu. ok langsung saja Let’s get started!!</blockquote>
 Berikut langkah-langkah dan persiapan set-up octopress:
