@@ -62,7 +62,7 @@ html {
   .blue_dark {
       color: #5AA6F1;
       text-shadow: 2px 2px 2px  #030a12;
-      font-size:20px;
+      font-size:25px;
   }
   .blue_light {
       text-shadow: 2px 2px 2px  #030a12;
