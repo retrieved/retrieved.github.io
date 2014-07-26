@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-07-22T06:30:11+08:00</updated>
+  <updated>2014-07-27T02:59:07+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -20,6 +20,12 @@
     <id>http://retrieved.github.io/blog/2014/07/22/menganalisa-masalah-dan-membuat-algoritma</id>
     <content type="html"><![CDATA[<p>Proses pertama, menganalisa terhadap masalah dan membuat algoritma memang tidak bisa begitu saja diwujudkan, pengalaman, pengetahuan, kreativitas, imajinasi dan keahlian merupakan faktor-faktor yang menentukan sekali keberhasilan langkah ini. Di dalam analisa masalah, diperlukan tindakan untuk mengindentifikasi informasi yang menjadi keluaran pemecahan masalah dan data-data yang menjadi masukan.
 komputer tidak akan berarti apa-apa tanpa adanya langkah detail menyusun prosedur. maksud langkah detail menyusun prosedur  yang ditujukan untuk komputer guna menyelesaikan suatu masalah inilah yang disebut <code>algoritma</code>. namun algoritma ini tidak bergantung dalam bahasa pemograman, karena algoritma bersifat bebas dengan bahasa pemograman.</p>
+
+<blockquote>
+Istilah algoritma berasal dari nama seorang pengarang berkebangsaan Arab bernama Abu Ja&#8217;far Mohammed ibn Musa al Khowarizmi (tahun 790 - 840), yang sangat terkenal sebagai &#8220;bapak Aljabar&#8221;.
+<image src="http://retrieved.github.io/images/alkhuarizmi.jpg" align="midlle" width="224" height="330"> 
+</blockquote>
+
 ]]></content>
   </entry>
   
