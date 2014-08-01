@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-07-27T03:38:14+08:00</updated>
+  <updated>2014-08-02T01:00:36+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -23,8 +23,44 @@ komputer tidak akan berarti apa-apa tanpa adanya langkah detail menyusun prosedu
 
 <blockquote>
 Istilah algoritma berasal dari nama seorang pengarang berkebangsaan Arab bernama Abu Ja&#8217;far Mohammed ibn Musa al Khowarizmi (tahun 790 - 840), yang sangat terkenal sebagai &#8220;bapak Aljabar&#8221;.<br>
-<image src="http://retrieved.github.io/images/alkhuarizmi.jpg" align="midlle" width="224" height="330"> 
+<image src="http://retrieved.github.io/images/alkhuarizmi.jpg" align="middle" width="224" height="330"> 
 </blockquote>
+
+
+<p>algoritma bisa dinyatakan dalam bahasa manusia dan dalam bentuk pseudokode (pseudocode), contoh algoritma yang dinyatakan dalam bahasa manusia misalnya seperti berikut:</p>
+
+<ol>
+<li>peroleh nilai panjang dan lebar persegi panjang</li>
+<li>hitung keliling persegi panjang dengan menggunakan rumus 2 x (panjang + lebar)</li>
+<li>tampilkan nilai keliling persegi panjang</li>
+</ol>
+
+
+<p>dan berikut adalah contoh algoritma sederhana dalam bentuk pseudokode, sebelum itu menjabarkan sedikit apa itu bentuk pseudokode, yaitu suatu bentuk algoritma yang menggunakan berbagai notasi yang dimaksud untuk menyederhanakan bentuk kalimat manusia, dan pseudokode seringkali mengarah ke bahasa pemograman tertentu:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>i &lt;- 1
+</span><span class='line'>jum &lt;- 0
+</span><span class='line'>while i &lt; 10
+</span><span class='line'>a. jum &lt;- + i
+</span><span class='line'>b. i &lt;- i + 1
+</span><span class='line'>write(i)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>merupakan pseudokode yang beroreintasi pada bahasa <code>c</code>, <code>pascal</code>, atau <code>Algol</code>. algoritma diatas digunakan untuk melakukan perhitungan 1+2+3+4+5+6+7+8+9.
+algoritma bisa juga disajikan dalam bentuk diagram alir (flowchart).diagram alir adalah suatu standart untuk menggambarkan suatu proses, misalnya seperti berikut :</p>
+
+<blockquote>
+Jalan Raya Batulicin sepanjang 4000 Km akan segera ditingkatkan, pada setiap 50 Km akan dibangun fasilitias berupa pomp bensin, tempat ibadah dan rumah makan. Tampilkan lokasi pada jarak kilometer berapa fasilitas tersebut akan dibangun:
+<image src="http://retrieved.github.io/images/flw.jpg" align="middle" width="325" height="475">
+</blockquote>
+
+
 
 ]]></content>
   </entry>
