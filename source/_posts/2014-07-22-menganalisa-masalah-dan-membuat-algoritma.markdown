@@ -30,6 +30,6 @@ merupakan pseudokode yang beroreintasi pada bahasa `c`, `pascal`, atau `Algol`. 
 algoritma bisa juga disajikan dalam bentuk diagram alir (flowchart).diagram alir adalah suatu standart untuk menggambarkan suatu proses, misalnya seperti berikut :
 <blockquote>
 Jalan Raya Batulicin sepanjang 4000 Km akan segera ditingkatkan, pada setiap 50 Km akan dibangun fasilitias berupa pomp bensin, tempat ibadah dan rumah makan. Tampilkan lokasi pada jarak kilometer berapa fasilitas tersebut akan dibangun:
-<image src="http://retrieved.github.io/images/flw.jpg" align="middle" width="325" height="475">
 </blockquote>
+<image src="http://retrieved.github.io/images/flw.jpg" align="middle" width="325" height="475">
 
