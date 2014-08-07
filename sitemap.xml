@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://retrieved.github.io/blog/2014/08/08/class-and-object/</loc>
+    <lastmod>2014-08-08T02:19:23+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://retrieved.github.io/blog/2014/07/22/menganalisa-masalah-dan-membuat-algoritma/</loc>
     <lastmod>2014-07-22T02:03:57+08:00</lastmod>
     <priority>0.8</priority>
@@ -47,21 +53,21 @@
   
   <url>
     <loc>http://retrieved.github.io/</loc>
-    <lastmod>2014-08-02T01:06:35+08:00</lastmod>
+    <lastmod>2014-08-08T02:25:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://retrieved.github.io/blog/archives/</loc>
-    <lastmod>2014-08-02T01:06:35+08:00</lastmod>
+    <lastmod>2014-08-08T02:25:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://retrieved.github.io/curriculum-vitae/</loc>
-    <lastmod>2014-08-02T01:06:35+08:00</lastmod>
+    <lastmod>2014-08-08T02:25:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

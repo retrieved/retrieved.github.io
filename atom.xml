@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-08-02T01:06:35+08:00</updated>
+  <updated>2014-08-08T02:25:54+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -12,6 +12,123 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Class &amp; Object]]></title>
+    <link href="http://retrieved.github.io/blog/2014/08/08/class-and-object/"/>
+    <updated>2014-08-08T02:19:23+08:00</updated>
+    <id>http://retrieved.github.io/blog/2014/08/08/class-and-object</id>
+    <content type="html"><![CDATA[<p>untuk mengakses data atau atribut yang ada pada kelas tertentu disarankan terlebih dahulu membuat <code>getter</code> dan <code>setter</code>, dengan menggunkaan mettode <code>getter</code> dan <code>setter</code> ini berarti melakukan setelah suatu object sudah kita buat / tercipata. setelah itu bari kita mengakses atau melakukan pengaturan pengaturan nilai data / atribut yang ada dalam object tertentu, yang dimana setter digunakan untuk melakukan pengaturan nilai data / atribut dan untuk mengambil nilai itu kita akan menggunakan yang disebut getter, dengan demikian kita sudah melakukan akses tak langsung pada data / atribut yang dimiliki oleh obeject tertentu itu, pendekatan inilah yang disarankan saat kita melakukan pemograman menggunakan bahasa pemograman java , dan juga saat menggunakan bahasa pemograman <code>OOP</code> lainnya.
+Bagaimana jika kita menghendaki supaya pengaturan pengaturan itu bersamaan saat suatu object tercipta.? Untuk melakukan hal itu kita bisa membuat / menggunakan constructor, sebelum itu tau ngga sih apat itu constructor ? “Tau dong :D” constructor adalah suatu metode yang dieksekusi / dijalankan secara otomatis, saat suatu object tercipta dari suatu kelas (class). Menurut konvensi, konstruktor harus memiliki nama yang sama dengan nama kelasnya. Saat membuat constructor kita bisa langsung memberikan parameter didalam constructor karena constructor juga bisa disebut prosedure / method. Berikut contoh sederhananya :</p>
+
+<figure class='code'><figcaption><span>class Guitar</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Gitar</span><span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">String</span> <span class="n">warna</span><span class="o">;</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">jumlah_senar</span><span class="o">;</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">jumlah_spool</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//konstruktor 1</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">Gitar</span><span class="o">(){</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">();</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//konstruktor 2</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">Gitar</span><span class="o">(</span><span class="n">String</span> <span class="n">warna</span><span class="o">,</span> <span class="kt">int</span> <span class="n">jumlah_senar</span><span class="o">,</span> <span class="kt">int</span> <span class="n">jumlah_spool</span><span class="o">){</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kd">super</span><span class="o">();</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">warna</span> <span class="o">=</span> <span class="n">warna</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">jumlah_senar</span> <span class="o">=</span> <span class="n">jumlah_senar</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">jumlah_spool</span> <span class="o">=</span> <span class="n">jumlah_spool</span><span class="o">;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getJumlah_senar</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">jumlah_senar</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJumlah_senar</span><span class="o">(</span><span class="kt">int</span> <span class="n">jumlah_senar</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="o">.</span><span class="na">jumlah_senar</span> <span class="o">=</span> <span class="n">jumlah_senar</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getJumlah_spool</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">jumlah_spool</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJumlah_spool</span><span class="o">(</span><span class="kt">int</span> <span class="n">jumlah_spool</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="o">.</span><span class="na">jumlah_spool</span> <span class="o">=</span> <span class="n">jumlah_spool</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getWarna</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">warna</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWarna</span><span class="o">(</span><span class="n">String</span> <span class="n">warna</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="o">.</span><span class="na">warna</span> <span class="o">=</span> <span class="n">warna</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">Freet</span><span class="o">(</span><span class="kt">int</span> <span class="n">freet</span><span class="o">){</span>
+</span><span class='line'>        <span class="kt">int</span> <span class="n">jumlahFreet</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class='line'>        <span class="n">jumlahFreet</span> <span class="o">=</span> <span class="n">jumlahFreet</span> <span class="o">+</span> <span class="n">freet</span><span class="o">;</span>
+</span><span class='line'>        <span class="k">return</span> <span class="o">(</span><span class="n">jumlahFreet</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Menganalisa Masalah dan Membuat Algoritma]]></title>
