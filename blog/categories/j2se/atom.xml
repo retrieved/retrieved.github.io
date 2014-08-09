@@ -4,7 +4,7 @@
   <title><![CDATA[Category: j2se | Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/blog/categories/j2se/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-08-10T04:43:48+08:00</updated>
+  <updated>2014-08-10T04:50:01+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Stack dan Heap Memory di Java]]></title>
+    <link href="http://retrieved.github.io/blog/2014/08/10/stack-dan-heap-memory-di-java/"/>
+    <updated>2014-08-10T04:47:29+08:00</updated>
+    <id>http://retrieved.github.io/blog/2014/08/10/stack-dan-heap-memory-di-java</id>
+    <content type="html"><![CDATA[<p>Tau ngga sih?  “tau dongg” apa itu memori stack dan heap pada java, sebenarnya banyak artikel yang mejelaskan pengertian antara memori stack dan heap, kali ini ane coba kembali menuliskan apa perbedaan kedua memori tersebut, oke saat nya newbie action :D !!</p>
+
+<h5>ruang heap di java :</h5>
+
+
+<p>Ketika kita mulai meprogram dengan java, system operasi yang kita gunakan aka memeberikan beberapa memori ke JVM, java menggunakan memori ini untuk semua kebutuhan, nah bagian memori yang digunakan JVM inilah yang desebut heap memory, setiapa kali kita membuat object menggunakan operator new maka akan di alokasikan memori dari heap, dan ketika  object selesai digunakan memori kembali ke ruang heap di java</p>
+
+<h5>Ruang stack di java:</h5>
+
+
+<p>Semua parameter pada method dan local variable akan dialokasikan memori dari stack,  jadi jika mengambalikan nilai primitive (bukan varibel) maka akan dialokasikan memori dari stack,</p>
+
+<blockquote>
+Stack space :
+<ul>
+<li><em>method Main</em></li>
+<li><em>Saat menciptakan method tanpa /beserta parameter<em></li>
+<li><em>Variable reference yang ada di scope method<em><li>
+</ul>
+Heap space:
+<ul>
+<li><em>variable reference milik class</em></li>
+<li><em>Saat menciptakan object dengan operator `new` </em></li>
+</ul>
+</blockquote>
+
+
+<p>```java ManagemenMemory.java
+public class ManagementMemory {</p>
+
+<pre><code>String nama;//instace variabel = Heap space
+int id ;//instace variabel = Heap space
+
+public static void main(String[] args){
+   ManagementMemory m; //variable referance = stack space
+    m = new ManagementMemory();//object ManagementMemory = heap space 
+
+}
+
+
+public String getNama() {//stack space = function
+    return nama;
+}
+
+public void setNama(String nama) {//stack space = method and parameter
+    this.nama = nama;
+}
+</code></pre>
+
+<p>}
+```
+referensi :
+<a href="http://javarevisited.blogspot.com/2013/01/difference-between-stack-and-heap-java.html">http://javarevisited.blogspot.com/2013/01/difference-between-stack-and-heap-java.html</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Class &amp; Object]]></title>
@@ -148,40 +209,6 @@ Kapan GC terjadi : Gc terjadi ketika memori yang digunakan aplikasi melebihi dar
 <p><code>Java</code> juga menyediakan beragam teknik pengamanan lain yakni bahasa dirancang untuk mempersulit eksekusi kode perusak. Peniadaan pointer merupakan langkah besar pengamanan. Java tidak mengenal operasi pointer. Ditangan programmer andal, operasi pointer merupakan hal yang luar biasa untuk optimasi dan pembuatan program yang efisien serta mengagumkan. Namun mode ini dapat menjadi petaka di hadapan programmer jahat. Pointer merupakan sarana luas biasa untuk pengaksesan tak diotorisasi. Dengan peniadaan operasi pointer, Java dapat menjadi bahasa yang lebih aman.</p>
 
 <p><code>Java</code> memiliki beberapa pengaman terhadap applet. Untuk mencegah program bertindak mengganggu media penyimpanan, maka applet tidak diperbolehkan melakukan open , read, ataupun write terhadap berkas secara sembarangan. Oleh karena Java applet dapat membuka jendela browser yang baru , maka jendela mempunyai logo java  dan teks identifikasi terhadap jendela yang dibuka. Hal ini mencegah jendela pop-up menipu sebagai permintaan keterangan nama pengguna dan kata sandi.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mengenal Java]]></title>
-    <link href="http://retrieved.github.io/blog/2014/07/21/mengenal-java/"/>
-    <updated>2014-07-21T08:58:06+08:00</updated>
-    <id>http://retrieved.github.io/blog/2014/07/21/mengenal-java</id>
-    <content type="html"><![CDATA[<p>Sebagai bahasa pemograman, Java tidak terlepas dari bahasa lain yang menjadi pendukungnya. Java mengambil fitur – fitur bahasa lain yang dianggap sebagai kelebihan oleh tim proyek Green. Bahasa – bahasa yang berjasa dalam perkembangan java tersebut antara lain :</p>
-
-<p><code>Bahasa C++</code>
-Bahasa ini paling berpengaruh terhadap Java, ini dikeranakan basis para tim adalah C++. Pada bahasa C++ diadopsi sintaks, sebagian semantic, dan exceptiop handling.<br></p>
-
-<p><code>Bahasa Pascal</code>
-Bahasa ini menyumbangkan prinsip mesin machine, sehingga Java dapat berjalan dalam berbgai platform. Mesin virtual sendiri merupakan rancangan Niklaus Wirth, pencipta Pascal.<br></p>
-
-<p><code>Bahasa SIMULA</code>
-Bahasa ini berkembang sekitar tahun 1965-an. Selain C++ bahasa SIMULA juga sangat mempengaruhi Java dalam hal bentukan-bentukan dasar dari pemograman berorientasi objek(OOP).<br></p>
-
-<p><code>Bahasa LISP</code>
-Fasilitas garbage Collection dan kemampuan untuk meniru generic list processing  (fasilitas ini jarang digunakan ) di adopsi dari bahasa LISP. Bahasa ini berkembang sekitar tahun 1955-an<br></p>
-
-<p><code>Bahasa Algol</code>
-Java meniru struktur kendali yang dimiliki oleh bahasa Algol. Bahasa ini berkembang sekitar tahun 1960-an.<br>
-<code>Bahasa Ada</code>
-Dari bahasa Ada, Java mengadopsi fitur strongly type dan Exception Handling.<br>
-<code>Bahasa Objective C</code>
-Dari bahasa ini diambil fasilitas antarmuka.<br></p>
-
-<p><code>Bahasa SmallTalk</code>
-Java meniru bahasa ST dalam hal pendekatan single-root class hierarchy (objek adalah satu kesatuan hierarki  pewarisan).<br></p>
-
-<p><code>Bahasa Eiffel</code>
-Fasilitas assertion yang dimiliki bahasa Eiffel diadopsi oleh Java dan mulai diterapkan pada sebagian JDK 1.4.<br></p>
 ]]></content>
   </entry>
   

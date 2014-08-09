@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-08-10T04:43:48+08:00</updated>
+  <updated>2014-08-10T04:50:01+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -12,6 +12,94 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Stack dan Heap Memory di Java]]></title>
+    <link href="http://retrieved.github.io/blog/2014/08/10/stack-dan-heap-memory-di-java/"/>
+    <updated>2014-08-10T04:47:29+08:00</updated>
+    <id>http://retrieved.github.io/blog/2014/08/10/stack-dan-heap-memory-di-java</id>
+    <content type="html"><![CDATA[<p>Tau ngga sih?  “tau dongg” apa itu memori stack dan heap pada java, sebenarnya banyak artikel yang mejelaskan pengertian antara memori stack dan heap, kali ini ane coba kembali menuliskan apa perbedaan kedua memori tersebut, oke saat nya newbie action :D !!</p>
+
+<h5>ruang heap di java :</h5>
+
+
+<p>Ketika kita mulai meprogram dengan java, system operasi yang kita gunakan aka memeberikan beberapa memori ke JVM, java menggunakan memori ini untuk semua kebutuhan, nah bagian memori yang digunakan JVM inilah yang desebut heap memory, setiapa kali kita membuat object menggunakan operator new maka akan di alokasikan memori dari heap, dan ketika  object selesai digunakan memori kembali ke ruang heap di java</p>
+
+<h5>Ruang stack di java:</h5>
+
+
+<p>Semua parameter pada method dan local variable akan dialokasikan memori dari stack,  jadi jika mengambalikan nilai primitive (bukan varibel) maka akan dialokasikan memori dari stack,</p>
+
+<blockquote>
+Stack space :
+<ul>
+<li><em>method Main</em></li>
+<li><em>Saat menciptakan method tanpa /beserta parameter<em></li>
+<li><em>Variable reference yang ada di scope method<em><li>
+</ul>
+Heap space:
+<ul>
+<li><em>variable reference milik class</em></li>
+<li><em>Saat menciptakan object dengan operator `new` </em></li>
+</ul>
+</blockquote>
+
+
+
+
+<figure class='code'><figcaption><span>ManagemenMemory.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ManagementMemory</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">String</span> <span class="n">nama</span><span class="o">;</span><span class="c1">//instace variabel = Heap space</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">id</span> <span class="o">;</span><span class="c1">//instace variabel = Heap space</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+</span><span class='line'>       <span class="n">ManagementMemory</span> <span class="n">m</span><span class="o">;</span> <span class="c1">//variable referance = stack space</span>
+</span><span class='line'>        <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ManagementMemory</span><span class="o">();</span><span class="c1">//object ManagementMemory = heap space </span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getNama</span><span class="o">()</span> <span class="o">{</span><span class="c1">//stack space = function</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">nama</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNama</span><span class="o">(</span><span class="n">String</span> <span class="n">nama</span><span class="o">)</span> <span class="o">{</span><span class="c1">//stack space = method and parameter</span>
+</span><span class='line'>        <span class="k">this</span><span class="o">.</span><span class="na">nama</span> <span class="o">=</span> <span class="n">nama</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>referensi :
+<a href="http://javarevisited.blogspot.com/2013/01/difference-between-stack-and-heap-java.html">http://javarevisited.blogspot.com/2013/01/difference-between-stack-and-heap-java.html</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Class &amp; Object]]></title>
