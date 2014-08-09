@@ -16,8 +16,8 @@ Semua parameter pada method dan local variable akan dialokasikan memori dari sta
 Stack space :
 <ul>
 <li><em>method Main</em></li>
-<li><em>Saat menciptakan method tanpa /beserta parameter<em></li>
-<li><em>Variable reference yang ada di scope method<em><li>
+<li><em>Saat menciptakan method tanpa /beserta parameter</em></li>
+<li><em>Variable reference yang ada di scope method</em><li>
 </ul>
 Heap space:
 <ul>
