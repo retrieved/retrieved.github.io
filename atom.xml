@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-08-10T05:11:19+08:00</updated>
+  <updated>2014-08-18T02:56:26+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Type dari Design Pattern]]></title>
+    <link href="http://retrieved.github.io/blog/2014/08/18/type-dari-design-pattern/"/>
+    <updated>2014-08-18T02:51:09+08:00</updated>
+    <id>http://retrieved.github.io/blog/2014/08/18/type-dari-design-pattern</id>
+    <content type="html"><![CDATA[<p>Dari referensi buku design pattern yang berjudul &ldquo;Elements of Reusable Object Oriented Software&rdquo;,
+desing pattern ini dapat di clasifikasin menjadi 3 kategori yaitu creational, structural, and behaviour pattern
+sekarang kita bahas 1 persatu :</p>
+
+<h5>Creational pattern</h5>
+
+
+<p>pada design pattern ini menyediakan cara untuk membuat object yang tidak langsung atau pembuatan object logic dengan tersembunyi, dari pada  me instans object langsung menggunakan operator new.
+hal ini memberikan banyak fleksibelitas dalam pembuatan object untuk use case tertentu</p>
+
+<h5>Structural pattern</h5>
+
+
+<p>design pattern ini memberikan perhatian komposisi class dan object, konsep dari pewarisan (inheritance) yang dimaksud ini  digunakan untuk menulis interface dan menentukan cara untuk menulis object untuk mendapatkan fungsi baru.</p>
+
+<h5>behaviour pattern</h5>
+
+
+<p>desing pattern ini secara khusus berkaitan dengan kominikasi antar object</p>
+
+<p>referensi : <a href="http://www.tutorialspoint.com/design_pattern/">http://www.tutorialspoint.com/design_pattern/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Stack dan Heap Memory di Java]]></title>

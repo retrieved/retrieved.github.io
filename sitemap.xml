@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://retrieved.github.io/blog/2014/08/18/type-dari-design-pattern/</loc>
+    <lastmod>2014-08-18T02:51:09+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://retrieved.github.io/blog/2014/08/10/stack-dan-heap-memory-di-java/</loc>
     <lastmod>2014-08-10T04:47:29+08:00</lastmod>
     <priority>0.8</priority>
@@ -59,21 +65,21 @@
   
   <url>
     <loc>http://retrieved.github.io/</loc>
-    <lastmod>2014-08-10T05:11:19+08:00</lastmod>
+    <lastmod>2014-08-18T02:56:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://retrieved.github.io/blog/archives/</loc>
-    <lastmod>2014-08-10T05:11:19+08:00</lastmod>
+    <lastmod>2014-08-18T02:56:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://retrieved.github.io/curriculum-vitae/</loc>
-    <lastmod>2014-08-10T05:11:19+08:00</lastmod>
+    <lastmod>2014-08-18T02:56:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
