@@ -4,7 +4,7 @@
   <title><![CDATA[Category: j2se | Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/blog/categories/j2se/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-08-18T02:56:26+08:00</updated>
+  <updated>2014-08-18T03:51:17+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -12,6 +12,130 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Factory Pattern]]></title>
+    <link href="http://retrieved.github.io/blog/2014/08/18/factory-pattern/"/>
+    <updated>2014-08-18T03:32:28+08:00</updated>
+    <id>http://retrieved.github.io/blog/2014/08/18/factory-pattern</id>
+    <content type="html"><![CDATA[<p>factory pattern adalah satu dari banyak digunakan di design pattern java. type desing pattern ini menyediakan satu dari cara terbaik untuk pembuatan object.
+Dalam factory pattern, kita membuat objek tanpa menyingkapkan logika penciptaan kepada klien dan merujuk ke objek yang baru dibuat menggunakan interface pada umumnya. Untuk mempertajam visi ups maksudnya mempertajam pemahaman tentang factory patter berikut contoh sederhana implementasinya:</p>
+
+<p>membuat interfaca senjata
+```java Senjata.java
+public interface Senjata {</p>
+
+<pre><code>void suaraTembak();
+</code></pre>
+
+<p>}
+<code>
+membuat kelas yang mengimplementasikan interface Senjata
+</code>java AK_47.java
+public class AK_47 implements Senjata {</p>
+
+<pre><code>public void suaraTembak() {
+    System.out.println("deerrreeeetttettr");
+}
+</code></pre>
+
+<p>}</p>
+
+<p><code>
+</code>java FN_FAL.java
+public class FN_FAL implements Senjata {</p>
+
+<pre><code>public void suaraTembak() {
+    System.out.println("dorrrr dorrrr");
+}
+</code></pre>
+
+<p>}</p>
+
+<p><code>
+</code>java M16.java
+public class M16 implements Senjata {</p>
+
+<pre><code>public void suaraTembak() {
+    System.out.println("Breeet Brettt");
+}
+</code></pre>
+
+<p>}</p>
+
+<p><code>
+Buat factory untuk menghasilkan objek Senjata berdasarkan informasi yang diberikan.
+</code>java Tentara.java
+public class Tentara {</p>
+
+<pre><code>//menggunakan method getSenjata untuk mendapatkan object dari type Senjata
+
+public Senjata getSenjata(String typeSenjata){
+    if(typeSenjata == null){
+
+        return null;
+    }
+
+    if(typeSenjata.equalsIgnoreCase("AK_47")){
+
+        return new AK_47();
+
+    }else if(typeSenjata.equalsIgnoreCase("FN_FAL")){
+
+        return new FN_FAL();
+
+    }else if(typeSenjata.equalsIgnoreCase("M16")){
+
+        return new M16();
+
+    }
+
+    return null;
+}
+</code></pre>
+
+<p>}</p>
+
+<p><code>
+gunakan factory untuk mendapatkan object dari Senjata dari passing type sebagai informasi
+</code>java Main.java
+public class Main {</p>
+
+<pre><code>/**
+ * @param args the command line arguments
+ */
+public static void main(String[] args) {
+    // TODO code application logic here
+
+    Tentara tentara = new Tentara();
+
+    //get an object of Circle and call its draw method.
+    Senjata senjata1 = tentara.getSenjata("AK_47");
+    senjata1.suaraTembak();
+
+    Senjata senjata2 = tentara.getSenjata("FN_FAL");
+    senjata2.suaraTembak();
+
+    Senjata senjata3 = tentara.getSenjata("M16");
+    senjata3.suaraTembak();
+
+}
+</code></pre>
+
+<p>}</p>
+
+<p>```
+virify the output
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>run:
+</span><span class='line'>deerrreeeetttettr
+</span><span class='line'>dorrrr dorrrr
+</span><span class='line'>Breeet Brettt</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Type dari Design Pattern]]></title>
@@ -180,38 +304,6 @@ Untuk membuat program yang ditulis oleh seseorang atau bisa disebut dengan <code
 <li>Orang yang membuat program disebut pemogram (`programmer`)
 </blockquote>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Keunggulan Java]]></title>
-    <link href="http://retrieved.github.io/blog/2014/07/22/keunggulan-java/"/>
-    <updated>2014-07-22T01:22:07+08:00</updated>
-    <id>http://retrieved.github.io/blog/2014/07/22/keunggulan-java</id>
-    <content type="html"><![CDATA[<p>Java memiliki beberapa keunggulan yang tidak dimiliki oleh bahasa lain. Berdasarkan dokumen resmi dari Sun Microsystem, Java memiliki karakteristik berikut :</p>
-
-<p><code>Sederhana</code> Bahasa pemograman Java menggunakan sintaks mirip dengan C++ namun sintaks pada java telah banyak diperbaiki terutama menghilangkan penggunaan pointer yang rumit dan multiple inheritance. Java juga menggunakan automatic memory allocation dan memory garbage collection.</p>
-
-<p><code>Beoreintasi objek</code> Java menggunakan pemograman beroreitasi objeck yang membuat program dapat dibuat secara  modular dan dapat dipergunakan kembali. Pemograman beoreintasi object memodelkan dunia nyata kedalam object dan melakukan interaksi antar object – object tersebut.
-Dapat didistribusikan dengan mudah
-Java dibuat untuk membuat aplikasi terdistribusi secara mudah dengan adanya libraries networking yang terintegrasi.</p>
-
-<p><code>Interpreter</code> Program java dijalankan menggunakan interpreter yaitu Java virtual Machine (JVM). Hal ini menyebabkan kode sumber Java yang telah dikompilasi menjadi bytecode Java dapat dijalankan pada platform yang berbeda beda.</p>
-
-<p><code>Robust</code> Java mempunyai reliabilitas yang tinggi. Kompilator pada java mempunyai kemampuan mendeteksi error secara lebih teliti dibandingkan bahasa pemograman lain. Java mempunyai Runtime – Exception handling untuk membantu mengatasi eror pada program.</p>
-
-<p><code>Aman</code> Sebagai bahasa pemograman untuk aplikasi internet dan terdistribusi java memeliki beberapa mekanisme keamanan untuk menjaga aplikasi agar tidak digunakan untuk merusak system computer yang menjalankan aplikasi program tersebut.</p>
-
-<p><code>Arsitekstur Netral</code> Program java bersifat platform independent. Program cukup mempunyai satu buah porsi yang dapat dijalankan pada platform yang berbeda dengan JVM.</p>
-
-<p><code>Portebel</code> Kodes sumber maupun program Java dapat dengan mudah dibawa keplatform yang berbeda – beda tanpa harus di kompilasi ulang.</p>
-
-<p><code>Kinerja</code> Kinerja pada Java sering dikatakan kurang tinggi. Namun kinerja Java dapat ditingkatkan menggunkan kompilasi Java lain seperti buatas inprise, Microsoft, ataupun Symantec yang menggunakan Just in Time Compilers (JIT).</p>
-
-<p><code>Multithreaded</code> Java mempunyai kemampuan untuk membuat suatu program yang dapat melakukan beberapa pekerjaan sekaligus dan simultan (Serentak).</p>
-
-<p><code>Dinamis</code>
-Java didesain untuk dapat dijalankan pada lingkungan yang dunamis. Perubahan pada suatu kelas (class) dengan menambahkan property ataupun method dapat dilakukan tanpa menggangu program yang menggunakan kelas tersebut.</p>
 ]]></content>
   </entry>
   

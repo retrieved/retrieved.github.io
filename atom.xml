@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-08-18T02:56:26+08:00</updated>
+  <updated>2014-08-18T03:51:17+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -12,6 +12,206 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Factory Pattern]]></title>
+    <link href="http://retrieved.github.io/blog/2014/08/18/factory-pattern/"/>
+    <updated>2014-08-18T03:32:28+08:00</updated>
+    <id>http://retrieved.github.io/blog/2014/08/18/factory-pattern</id>
+    <content type="html"><![CDATA[<p>factory pattern adalah satu dari banyak digunakan di design pattern java. type desing pattern ini menyediakan satu dari cara terbaik untuk pembuatan object.
+Dalam factory pattern, kita membuat objek tanpa menyingkapkan logika penciptaan kepada klien dan merujuk ke objek yang baru dibuat menggunakan interface pada umumnya. Untuk mempertajam visi ups maksudnya mempertajam pemahaman tentang factory patter berikut contoh sederhana implementasinya:</p>
+
+<p>membuat interfaca senjata</p>
+
+<figure class='code'><figcaption><span>Senjata.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Senjata</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kt">void</span> <span class="nf">suaraTembak</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>membuat kelas yang mengimplementasikan interface Senjata</p>
+
+<figure class='code'><figcaption><span>AK_47.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AK_47</span> <span class="kd">implements</span> <span class="n">Senjata</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">suaraTembak</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;deerrreeeetttettr&quot;</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span>FN_FAL.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FN_FAL</span> <span class="kd">implements</span> <span class="n">Senjata</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">suaraTembak</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;dorrrr dorrrr&quot;</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span>M16.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">M16</span> <span class="kd">implements</span> <span class="n">Senjata</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">suaraTembak</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Breeet Brettt&quot;</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Buat factory untuk menghasilkan objek Senjata berdasarkan informasi yang diberikan.</p>
+
+<figure class='code'><figcaption><span>Tentara.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tentara</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//menggunakan method getSenjata untuk mendapatkan object dari type Senjata</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">Senjata</span> <span class="nf">getSenjata</span><span class="o">(</span><span class="n">String</span> <span class="n">typeSenjata</span><span class="o">){</span>
+</span><span class='line'>        <span class="k">if</span><span class="o">(</span><span class="n">typeSenjata</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span><span class="o">(</span><span class="n">typeSenjata</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">&quot;AK_47&quot;</span><span class="o">)){</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="k">return</span> <span class="k">new</span> <span class="nf">AK_47</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">typeSenjata</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">&quot;FN_FAL&quot;</span><span class="o">)){</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="k">return</span> <span class="k">new</span> <span class="nf">FN_FAL</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">typeSenjata</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">&quot;M16&quot;</span><span class="o">)){</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="k">return</span> <span class="k">new</span> <span class="nf">M16</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>gunakan factory untuk mendapatkan object dari Senjata dari passing type sebagai informasi</p>
+
+<figure class='code'><figcaption><span>Main.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * @param args the command line arguments</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="c1">// TODO code application logic here</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">Tentara</span> <span class="n">tentara</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tentara</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">//get an object of Circle and call its draw method.</span>
+</span><span class='line'>        <span class="n">Senjata</span> <span class="n">senjata1</span> <span class="o">=</span> <span class="n">tentara</span><span class="o">.</span><span class="na">getSenjata</span><span class="o">(</span><span class="s">&quot;AK_47&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">senjata1</span><span class="o">.</span><span class="na">suaraTembak</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">Senjata</span> <span class="n">senjata2</span> <span class="o">=</span> <span class="n">tentara</span><span class="o">.</span><span class="na">getSenjata</span><span class="o">(</span><span class="s">&quot;FN_FAL&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">senjata2</span><span class="o">.</span><span class="na">suaraTembak</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">Senjata</span> <span class="n">senjata3</span> <span class="o">=</span> <span class="n">tentara</span><span class="o">.</span><span class="na">getSenjata</span><span class="o">(</span><span class="s">&quot;M16&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">senjata3</span><span class="o">.</span><span class="na">suaraTembak</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>virify the output</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>run:
+</span><span class='line'>deerrreeeetttettr
+</span><span class='line'>dorrrr dorrrr
+</span><span class='line'>Breeet Brettt</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Type dari Design Pattern]]></title>

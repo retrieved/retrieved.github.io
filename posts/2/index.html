@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: algoritma - Strive not to be a success</title>
+  <title>Strive not to be a success</title>
   <meta name="author" content="as_ary">
 
   
-  <meta name="description" content="Category: algoritma">
+  <meta name="description" content="Octopress adalah platform blogging yang &ldquo;wow&rdquo; direkomendasikan kepada siapapun yang tidak keberatan melakukan pekerjaan dengan sedikit &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://retrieved.github.io/blog/categories/algoritma/">
+  <link rel="canonical" href="http://retrieved.github.io/posts/2/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -143,41 +143,103 @@ ol > li:before {
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
-    <h1 class="entry-title">Category: Algoritma</h1>
+    
+      <h1 class="entry-title"><a href="/blog/2014/07/21/hello-world/">Octopress + Github Page Di Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-21T04:38:39+08:00" pubdate data-updated="true">Jul 21<sup>st</sup>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+  <div class="entry-content"><p>Octopress adalah platform blogging yang &ldquo;wow&rdquo; direkomendasikan kepada siapapun yang tidak keberatan melakukan pekerjaan dengan sedikit codingan, tetapi dibalik semua itu anda akan belajar beberapa keterampilan baru yang kren misal nya, belajar apa itu version control system dengan <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control" target="_blank" style="text-decoration:none">GIT</a> dan pastinya memiliki blog yang keren.<blockquote>sudah banyak tutorial yang mendetail tentang cara membuat blog dengan octopress. situs resmi octopress memiliki dokumentasi yang mendetail, dan pada tutorial ini mecoba menuliskan kembali langkah &ndash; langkah setup octopress di ubuntu. ok langsung saja Let’s get started!!</blockquote>
+Berikut langkah-langkah dan persiapan set-up octopress:</p>
 
-  
-  <h2>2014</h2>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>install git
+</span><span class='line'>buat repository di github
+</span><span class='line'>install ruby (pada tutorial ini installasi ruby menggunakan rvm)
+</span><span class='line'>clone octopress github repository (master branch)
+</span><span class='line'>install tema default octopress
+</span><span class='line'>configurasi octopress untuk halam github deploy
+</span><span class='line'>generate, commit dan push blog anda di repository github(master branch)
+</span><span class='line'>buat post pertama anda</span></code></pre></td></tr></table></div></figure>
 
-<article>
-  
-<h1><a href="/blog/2014/07/22/menganalisa-masalah-dan-membuat-algoritma/">Menganalisa Masalah dan Membuat Algoritma</a></h1>
-<time datetime="2014-07-22T02:03:57+08:00" pubdate><span class='month'>Jul</span> <span class='day'>22</span> <span class='year'>2014</span></time>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/algoritma/'>algoritma</a></span>
-</footer>
+<h5>Install Git</h5>
 
 
-</article>
+<p>buka terminal pada ubuntu anda dengan menekan CTRL + ALT + T, dan ketikkan perintah ini :</p>
+
+<figure class='code'><figcaption><span>Install Git </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:git-core/ppa
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install git-core</span></code></pre></td></tr></table></div></figure>
+
+
+<p>untuk melihat versi git ketikkan perintah berikut setelah intalasi selesai</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --version</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Membuat account github baru dan sebuah halam github repository</h5>
+
+
+<p>Default penamaan konvensi untuk halaman repositori Github adalah {username}.github.io&hellip; Anda dapat mengakses halaman situs Github anda (HTML statis hanya) melalui URL berikut <a href="http://">http://</a> {username} github.io.
+Halaman Github dasarnya memungkinkan Anda untuk meng-host situs HTML statis langsung di Github.</p>
 
 </div>
-
   
-</article>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/07/21/hello-world/">Read on &rarr;</a>
+    </footer>
+  
 
 
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="1">Newer &rarr;</a>
+    
+  </div>
 </div>
-
 <aside class="sidebar">
   
     <section>
@@ -213,7 +275,7 @@ ol > li:before {
             </span>
         </li>
   </h1>
-  <p>saya biasa di panggil <strong>as'ary</strong>, 
+  <p>saya biasa di panggil <strong>as&#8217;ary</strong>, 
   lulusan D3 Manajemen Informatika, Politeknik Negeri Banjarmasin, yang saat ini melanjutkan S1 di STMIK Banjarmasin.</p>
 <p>
     <ul>
@@ -260,7 +322,7 @@ ol > li:before {
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
+    <li class="loading">Status updating&#8230;</li>
   </ul>
   
   <a href="https://github.com/bacatulis">@bacatulis</a> on GitHub
@@ -319,7 +381,6 @@ ol > li:before {
 
   
 </aside>
-
 
     </div>
   </div>
