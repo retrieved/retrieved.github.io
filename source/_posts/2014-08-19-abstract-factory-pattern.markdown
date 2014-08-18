@@ -247,3 +247,6 @@ Breeet Brettt
 500 M
 BUILD SUCCESSFUL (total time: 0 seconds)
 {% endcodeblock %}
+<blockquote>
+sumber asli : http://www.tutorialspoint.com/design_pattern/
+</blockquote>
