@@ -4,7 +4,7 @@
   <title><![CDATA[Strive not to be a success]]></title>
   <link href="http://retrieved.github.io/atom.xml" rel="self"/>
   <link href="http://retrieved.github.io/"/>
-  <updated>2014-08-20T04:36:03+08:00</updated>
+  <updated>2014-08-21T02:13:53+08:00</updated>
   <id>http://retrieved.github.io/</id>
   <author>
     <name><![CDATA[as_ary]]></name>
@@ -12,6 +12,119 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Singleton Pattern]]></title>
+    <link href="http://retrieved.github.io/blog/2014/08/21/singleton-pattern/"/>
+    <updated>2014-08-21T02:12:08+08:00</updated>
+    <id>http://retrieved.github.io/blog/2014/08/21/singleton-pattern</id>
+    <content type="html"><![CDATA[<p>jenis design pattern ini bagian dari creational pattern. pola ini melibatkan satu class yang bertanggung jawab untuk menciptakan object  dengan memastikan hanya satu object tunggal yang dapat dibuat. dengan memberikan visibilty private pada contruktornya maka class tidak dapat di instansiasi, dan membuat static instansiasi itu sendiri. didalam class SingelObject nantinya menyediakan static method untuk mendapatkan static instansiasi object ini sendiri untuk dapat diakses. untuk lebih jelas berikut contohnya:</p>
+
+<figure class='code'><figcaption><span>SingleObject.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SingelOBject</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">String</span> <span class="n">nama</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//mebuat object dari SingleObject</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">static</span> <span class="n">SingelOBject</span> <span class="n">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SingelOBject</span><span class="o">();</span>
+</span><span class='line'>    <span class="c1">//memberikan visibilti private pada construktor agar tidak dapat di </span>
+</span><span class='line'>    <span class="kd">private</span> <span class="nf">SingelOBject</span><span class="o">(){}</span>
+</span><span class='line'>    <span class="c1">//mendapatkan object satu-satunya yang tersedia</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="n">SingelOBject</span> <span class="nf">getSingelOBject</span><span class="o">(){</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">instance</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getNama</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">nama</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNama</span><span class="o">(</span><span class="n">String</span> <span class="n">nama</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="o">.</span><span class="na">nama</span> <span class="o">=</span> <span class="n">nama</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span>SinglePatternDemo.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SingllePatternDemo</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/**</span>
+</span><span class='line'><span class="cm">     * @param args the command line arguments</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="c1">// TODO code application logic here</span>
+</span><span class='line'>  <span class="c1">//tidak lagi bisa meinstansiasi object sprti ini</span>
+</span><span class='line'>        <span class="c1">//SingelOBject singelOBject = new SingelOBject();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c1">//satu-satunya langkah untuk mendapatkan object yang tersedia</span>
+</span><span class='line'>        <span class="n">SingelOBject</span> <span class="n">object</span> <span class="o">=</span> <span class="n">SingelOBject</span><span class="o">.</span><span class="na">getSingelOBject</span><span class="o">();</span>
+</span><span class='line'>        <span class="n">object</span><span class="o">.</span><span class="na">setNama</span><span class="o">(</span><span class="s">&quot;asary&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">object</span><span class="o">.</span><span class="na">getNama</span><span class="o">());</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">SingelOBject</span> <span class="n">object2</span> <span class="o">=</span> <span class="n">SingelOBject</span><span class="o">.</span><span class="na">getSingelOBject</span><span class="o">();</span>
+</span><span class='line'>        <span class="n">object</span><span class="o">.</span><span class="na">setNama</span><span class="o">(</span><span class="s">&quot;ramadhan&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">object</span><span class="o">.</span><span class="na">getNama</span><span class="o">());</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>run:
+</span><span class='line'>asary
+</span><span class='line'>ramadhan
+</span><span class='line'>BUILD SUCCESSFUL (total time: 0 seconds)</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Abstract Factory Pattern]]></title>
